@@ -10,7 +10,7 @@ public class DetailedFeedbackGeneratorTest {
     public void testGenerateDetailedFeedback() {
         DetailedFeedbackGenerator generator = new DetailedFeedbackGenerator();
 
-        ask taskWithErrorsAndMissingComponents = new Task("1", "This task has an error and is missing parts.");
+        Task taskWithErrorsAndMissingComponents = new Task("1", "This task has an error and is missing parts.");
         String feedback = generator.generateFeedback(taskWithErrorsAndMissingComponents);
         assertEquals("Your task contains errors. Your task is missing some components. ", feedback);
     }
